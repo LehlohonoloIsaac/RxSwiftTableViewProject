@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         handleModelTapped()
         handleCellTapped()
     }
+    
     func setupUI(){
         students.bindTo(tableView.rx.items(cellIdentifier: "studentCell", cellType: StudentCell.self)){
             (_, student, cell) in
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     func handleModelTapped(){
         tableView.rx.modelSelected(Student.self).subscribe(onNext: {
             student in
+            //self.performSegue(withIdentifier: "studentDetails", sender: student)
             print("\(student.name) has surname : \(student.surname)")
         })
         .addDisposableTo(disposeBag)
@@ -40,11 +42,20 @@ class ViewController: UIViewController {
         tableView.rx.itemSelected.subscribe(onNext : {
             [weak self] indexPath in
             if let cell = self?.tableView.cellForRow(at: indexPath) as? StudentCell {
-                self?.updateCell(cell: cell)
+                //self?.updateCell(cell: cell)
+                self?.animateCell(cell: cell)
             }
         })
         .addDisposableTo(disposeBag)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destinationViewController = segue.destination as? StudentDetailsViewController {
+//            if let student = sender as? Student {
+//                destinationViewController.student = student
+//            }
+//        }
+//    }
     
 }
 extension ViewController{
@@ -56,6 +67,16 @@ extension ViewController{
             cell.backgroundColor = UIColor.white
             cell.tag = 0
         }
+    }
+    
+    func animateCell(cell: UITableViewCell){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: cell.center.x - 10, y: cell.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: cell.center.x + 10, y: cell.center.y))
+        cell.layer.add(animation, forKey: "position")
     }
 }
 

@@ -15,6 +15,7 @@
 		ED8FB6C71F8CCDB500925CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8FB6C51F8CCDB500925CCB /* LaunchScreen.storyboard */; };
 		ED8FB6CF1F8CCE3600925CCB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8FB6CE1F8CCE3600925CCB /* Student.swift */; };
 		ED8FB6D11F8CCF5C00925CCB /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8FB6D01F8CCF5C00925CCB /* StudentCell.swift */; };
+		EDC566D21F98B43A002197EC /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC566D11F98B43A002197EC /* StudentDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ED8FB6C81F8CCDB500925CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED8FB6CE1F8CCE3600925CCB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		ED8FB6D01F8CCF5C00925CCB /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		EDC566D11F98B43A002197EC /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				ED8FB6D01F8CCF5C00925CCB /* StudentCell.swift */,
 				ED8FB6BC1F8CCDB500925CCB /* AppDelegate.swift */,
 				ED8FB6BE1F8CCDB500925CCB /* ViewController.swift */,
+				EDC566D11F98B43A002197EC /* StudentDetailsViewController.swift */,
 				ED8FB6C01F8CCDB500925CCB /* Main.storyboard */,
 				ED8FB6C31F8CCDB500925CCB /* Assets.xcassets */,
 				ED8FB6C51F8CCDB500925CCB /* LaunchScreen.storyboard */,
@@ -227,6 +230,7 @@
 			files = (
 				ED8FB6BF1F8CCDB500925CCB /* ViewController.swift in Sources */,
 				ED8FB6CF1F8CCE3600925CCB /* Student.swift in Sources */,
+				EDC566D21F98B43A002197EC /* StudentDetailsViewController.swift in Sources */,
 				ED8FB6BD1F8CCDB500925CCB /* AppDelegate.swift in Sources */,
 				ED8FB6D11F8CCF5C00925CCB /* StudentCell.swift in Sources */,
 			);
